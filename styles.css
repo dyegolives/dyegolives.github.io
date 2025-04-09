@@ -1,0 +1,180 @@
+/* Estilos gerais para o corpo da página */
+body {
+    /* Define a fonte padrão para o corpo da página, usando uma sequência de fontes fallback para garantir compatibilidade */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Configura o corpo como um contêiner flexível para garantir que o footer fique no final da página */
+    display: flex;
+    /* Define a direção do flex como coluna, empilhando os elementos verticalmente */
+    flex-direction: column;
+    /* Garante que o corpo ocupe pelo menos 100% da altura da viewport, permitindo que o footer fique no fundo */
+    min-height: 100vh;
+}
+
+/* Estilo para o container principal */
+.container-fluid {
+    /* Faz com que o container principal cresça para ocupar o espaço disponível no eixo principal do flex (vertical) */
+    flex: 1;
+}
+
+/* Estilos para a barra lateral (sidebar) */
+.sidebar {
+    /* Define a altura mínima da sidebar como a altura da tela menos a altura do cabeçalho (assumido como 56px) */
+    min-height: calc(100vh - 56px);
+    /* Adiciona uma sombra à direita da sidebar para dar um efeito de profundidade */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Define uma largura fixa de 16.666667% (equivalente a 2 colunas em um grid de 12 colunas como Bootstrap) */
+    width: 16.666667%;
+    /* Mantém a sidebar em sua posição natural no fluxo do documento */
+    position: relative;
+    /* Define um índice de empilhamento para garantir que a sidebar fique acima de outros elementos, se necessário */
+    z-index: 1;
+}
+
+/* Estilo para os links da sidebar */
+.sidebar .nav-link {
+    /* Define a cor do texto dos links como um cinza escuro */
+    color: #333;
+    /* Adiciona preenchimento interno aos links para melhor espaçamento */
+    padding: 10px 15px;
+    /* Arredonda os cantos dos links para um visual mais suave */
+    border-radius: 5px;
+    /* Adiciona uma margem inferior entre os links para separá-los */
+    margin-bottom: 5px;
+}
+
+/* Efeito hover para os links da sidebar */
+.sidebar .nav-link:hover {
+    /* Muda o fundo para um cinza claro quando o mouse passa sobre o link */
+    background-color: #e9ecef;
+    /* Altera a cor do texto para um azul destacado no hover */
+    color: #0d6efd;
+}
+
+/* Estilo para os ícones na sidebar */
+.sidebar .nav-link i {
+    /* Adiciona uma margem à direita dos ícones para separá-los do texto */
+    margin-right: 10px;
+}
+
+/* Estilo para a área de conteúdo principal */
+.content-area {
+    /* Faz com que a área de conteúdo ocupe o espaço restante no layout flex */
+    flex: 1;
+    /* Adiciona preenchimento interno para evitar que o conteúdo encoste nas bordas */
+    padding: 20px;
+    /* Define o fundo como branco para destacar o conteúdo */
+    background-color: #fff;
+}
+
+/* Estilo para a seção hero (destaque) */
+.hero-section {
+    /* Define um gradiente escuro sobre uma imagem de fundo, com fallback para uma imagem placeholder */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('./Assets/Honda 40  s2000 (1920x1173).jpg');
+    /* Faz a imagem de fundo cobrir toda a área da seção */
+    background-size: cover;
+    /* Centraliza a imagem de fundo na seção */
+    background-position: center;
+    /* Define a cor do texto como branco para contraste com o fundo escuro */
+    color: white;
+    /* Define a altura fixa da seção hero como 300px */
+    height: 300px;
+    /* Configura a seção como um contêiner flexível para centralizar o conteúdo */
+    display: flex;
+    /* Organiza os elementos filhos em uma coluna vertical */
+    flex-direction: column;
+    /* Centraliza os elementos verticalmente dentro da seção */
+    justify-content: center;
+    /* Centraliza os elementos horizontalmente dentro da seção */
+    align-items: center;
+    /* Usa margens negativas para compensar o padding do container pai e ocupar toda a largura */
+    margin: -20px -20px 20px -20px;
+}
+
+/* Estilo para os cards */
+.card {
+    /* Adiciona uma sombra sutil aos cards para dar profundidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Define uma transição suave para transformações e sombras ao interagir */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover para os cards */
+.card:hover {
+    /* Eleva o card 5px para cima no hover, criando um efeito de "levantar" */
+    transform: translateY(-5px);
+    /* Aumenta a sombra no hover para reforçar o efeito de elevação */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o rodapé */
+footer {
+    /* Empurra o rodapé para o final da página usando margem automática no topo */
+    margin-top: auto;
+}
+
+/* Estilo para os links do rodapé */
+footer a {
+    /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
+    /* Adiciona uma transição suave para a mudança de cor */
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover para os links do rodapé */
+footer a:hover {
+    /* Muda a cor dos links para azul no hover, com !important para sobrescrever outras regras */
+    color: #0d6efd !important;
+}
+
+/* Estilos responsivos para telas menores que 992px (lg) */
+@media (max-width: 991.98px) {
+    /* Sidebar ocupa toda a largura e altura automática */
+    .sidebar {
+        /* Faz a sidebar ocupar 100% da largura em telas menores */
+        width: 100%;
+        /* Remove a altura mínima fixa, permitindo que ela se ajuste ao conteúdo */
+        min-height: auto;
+    }
+    
+    /* Conteúdo principal também ocupa toda a largura */
+    .content-area {
+        /* Garante que a área de conteúdo também ocupe 100% da largura */
+        width: 100%;
+    }
+    
+    /* Ajusta o padding do hero section em telas menores */
+    .hero-section {
+        /* Adiciona preenchimento vertical e horizontal para telas menores */
+        padding: 60px 20px;
+        /* Remove a altura fixa, permitindo que a seção se ajuste ao conteúdo */
+        height: auto;
+    }
+}
+
+/* Estilos para telas muito pequenas (menores que 576px) */
+@media (max-width: 575.98px) {
+    /* Ajusta o padding do conteúdo */
+    .content-area {
+        /* Reduz o preenchimento para 15px em telas muito pequenas */
+        padding: 15px;
+    }
+    
+    /* Reduz o tamanho do título no hero */
+    .hero-section h1 {
+        /* Define o tamanho da fonte do título como 2rem (32px em geral) */
+        font-size: 2rem;
+    }
+    
+    /* Ajusta o padding do rodapé */
+    footer {
+        /* Define um preenchimento fixo de 20px na vertical, sobrescrevendo outras regras */
+        padding: 20px 0 !important;
+    }
+    
+    /* Colunas do rodapé empilhadas */
+    footer .col-md-4 {
+        /* Adiciona uma margem inferior para empilhar as colunas do rodapé */
+        margin-bottom: 20px;
+    }
+}

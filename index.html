@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5, essencial para navegadores interpretarem o código corretamente -->
+<html lang="pt-br">
+<!-- Abertura da tag HTML com atributo 'lang' definido como 'pt-br' para indicar que o idioma principal é português brasileiro -->
+<head>
+    <!-- Início da seção 'head', que contém metadados, links para arquivos externos e configurações da página -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, permitindo suporte a caracteres especiais e acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a responsividade da página, ajustando a largura ao dispositivo e definindo a escala inicial como 1 -->
+    
+    <title>Honda Cars</title>
+    <!-- Define o título exibido na aba do navegador, neste caso "Meu Site com Bootstrap 5" -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Importa o arquivo CSS minificado do Bootstrap 5.3.0-alpha1 via CDN para estilização pronta -->
+    
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Vincula um arquivo CSS personalizado chamado 'styles.css' para estilos adicionais -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Importa os ícones do Bootstrap Icons versão 1.10.0 via CDN para uso na interface -->
+</head>
+<!-- Fechamento da seção 'head' -->
+
+<body>
+    <!-- Início da seção 'body', onde o conteúdo visível da página é definido -->
+    <div class="container-fluid p-0">
+    <!-- Container principal com 'container-fluid' para ocupar toda a largura e 'p-0' para remover padding interno -->
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Início da barra de navegação com classes do Bootstrap: expansível em telas grandes, fundo escuro e texto claro -->
+            <div class="container">
+            <!-- Container interno para limitar a largura do conteúdo da navbar e centralizá-lo -->
+                <a class="navbar-brand" href="#">
+                <!-- Link da marca/logotipo do site, neste caso apontando para a própria página (#) -->
+                    <img src="./Assets/logo honda vermelho.svg" alt="Logo" class="d-inline-block align-text-top me-2">
+                    <!-- Imagem de placeholder 50x50 como logo, alinhada ao texto com margem à direita -->
+                    Honda Cars
+                    <!-- Texto da marca exibido ao lado do logo -->
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <!-- Botão de menu 'hambúrguer' para telas pequenas, que ativa/desativa o menu colapsável -->
+                    <span class="navbar-toggler-icon"></span>
+                    <!-- Ícone padrão do Bootstrap para o botão de menu hambúrguer -->
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Div colapsável que contém os itens do menu, identificada por 'navbarNav' -->
+                    <ul class="navbar-nav me-auto">
+                    <!-- Lista de navegação alinhada à esquerda ('me-auto') com itens do menu -->
+                        <li class="nav-item">
+                        <!-- Item individual do menu -->
+                            <a class="nav-link active" href="#inicio"><i class="bi bi-house-door"></i> Início</a>
+                            <!-- Link 'Início' marcado como ativo, com ícone de casa do Bootstrap Icons -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Outro item do menu -->
+                            <a class="nav-link" href="#galeria"><i class="bi bi-images"></i> Galeria</a>
+                            <!-- Link 'Galeria' com ícone de imagens -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Outro item do menu -->
+                            <a class="nav-link" href="#sobre"><i class="bi bi-info-circle"></i> Sobre</a>
+                            <!-- Link 'Sobre' com ícone de informação -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Outro item do menu -->
+                            <a class="nav-link" href="#"><i class="bi bi-envelope"></i> Contato</a>
+                            <!-- Link 'Contato' com ícone de envelope -->
+                        </li>
+                    </ul>
+                    
+                    <form class="d-flex">
+                    <!-- Formulário de busca alinhado como flexbox -->
+                        <input class="form-control me-2" type="search" placeholder="Buscar...">
+                        <!-- Campo de entrada de texto para busca com placeholder e margem à direita -->
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                        <!-- Botão de envio do formulário com ícone de lupa e estilo de contorno claro -->
+                    </form>
+                </div>
+                <!-- Fechamento da div colapsável do menu -->
+            </div>
+            <!-- Fechamento do container interno da navbar -->
+        </nav>
+        <!-- Fechamento da barra de navegação -->
+        
+        <div class="row g-0">
+        <!-- Linha principal com 'g-0' para remover espaçamento entre colunas -->
+            <div class="col-lg-2 bg-light sidebar">
+            <!-- Coluna da barra lateral ocupando 2/12 da largura em telas grandes, com fundo claro -->
+                <div class="p-3">
+                <!-- Div interna com padding de 3 unidades para espaçamento -->
+                    <h5 class="text-center mb-4">Redes Sociais</h5>
+                    <!-- Título centralizado com margem inferior para a seção de redes sociais -->
+                    <ul class="nav flex-column">
+                    <!-- Lista de navegação vertical para links de redes sociais -->
+                        <li class="nav-item">
+                        <!-- Item da lista -->
+                            <a class="nav-link" href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+                            <!-- Link para Instagram com ícone, abrindo em nova aba -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Item da lista -->
+                            <a class="nav-link" href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
+                            <!-- Link para Facebook com ícone, abrindo em nova aba -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Item da lista -->
+                            <a class="nav-link" href="https://wa.me" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                            <!-- Link para WhatsApp com ícone, abrindo em nova aba -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Item da lista -->
+                            <a class="nav-link" href="https://x.com/" target="_blank"><i class="bi bi-x"></i> Twitter</a>
+                            <!-- Link para Twitter (X) com ícone, abrindo em nova aba -->
+                        </li>
+                        <li class="nav-item">
+                        <!-- Item da lista -->
+                            <a class="nav-link" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                            <!-- Link para LinkedIn com ícone, abrindo em nova aba -->
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4 p-2 bg-white rounded">
+                    <!-- Div para espaço de propaganda com margem superior, padding e bordas arredondadas -->
+                        <small>Espaço para propaganda</small>
+                        <!-- Texto pequeno indicando espaço reservado para propaganda -->
+                    </div>
+                </div>
+                <!-- Fechamento da div interna da sidebar -->
+            </div>
+            <!-- Fechamento da coluna da sidebar -->
+            
+            <div class="col-lg-10 content-area">
+            <!-- Coluna principal de conteúdo ocupando 10/12 da largura em telas grandes -->
+                <div class="hero-section p-5 text-center">
+                <!-- Seção de destaque (hero) com padding e texto centralizado -->
+                    <h1 class="display-4">Bem-vindo ao Honda Cars</h1>
+                    <!-- Título grande com classe 'display-4' do Bootstrap -->
+                    <p class="lead">Aqui estão alguns exemplares de Honda Civic Type R</p>
+                    <!-- Parágrafo com estilo 'lead' para destaque -->
+                </div>
+                
+                <div class="container mt-4">
+                <!-- Container interno com margem superior para organizar o conteúdo -->
+                    <div class="row">
+                    <!-- Linha para organizar os cards em colunas -->
+                        <div class="col-md-4 mb-4">
+                        <!-- Coluna ocupando 4/12 da largura em telas médias, com margem inferior -->
+                            <div class="card h-100">
+                            <!-- Card do Bootstrap com altura 100% para uniformidade -->
+                                <img src="./Assets/Honda 56 (3000x2000).jpg" class="card-img-top" alt="...">
+                                <!-- Imagem de placeholder no topo do card -->
+                                <div class="card-body">
+                                <!-- Corpo do card com conteúdo -->
+                                    <h5 class="card-title">Honda Civic Type R 2020</h5>
+                                    <!-- Título do card -->
+                                    <p class="card-text">Este é um card de exemplo com algum conteúdo de texto.</p>
+                                    <!-- Texto descritivo do card -->
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                    <!-- Botão azul primário com link -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna do Card 1 -->
+                        
+                        <div class="col-md-4 mb-4">
+                        <!-- Coluna para o segundo card -->
+                            <div class="card h-100">
+                            <!-- Card com altura uniforme -->
+                                <img src="./Assets/Honda 54 (3000x2000).jpg" class="card-img-top" alt="...">
+                                <!-- Imagem de placeholder -->
+                                <div class="card-body">
+                                <!-- Corpo do card -->
+                                    <h5 class="card-title">Honda Civic Type R 2020</h5>
+                                    <!-- Título do card -->
+                                    <p class="card-text">Outro card com conteúdo diferente para demonstrar o layout.</p>
+                                    <!-- Texto descritivo -->
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                    <!-- Botão de ação -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna do Card 2 -->
+                        
+                        <div class="col-md-4 mb-4">
+                        <!-- Coluna para o terceiro card -->
+                            <div class="card h-100">
+                            <!-- Card com altura uniforme -->
+                                <img src="./Assets/Honda 55 (3000x2000).jpg" class="card-img-top" alt="...">
+                                <!-- Imagem de placeholder -->
+                                <div class="card-body">
+                                <!-- Corpo do card -->
+                                    <h5 class="card-title">Honda Civic Type R 2020</h5>
+                                    <!-- Título do card -->
+                                    <p class="card-text">Esse é o terceiro card completando a linha de três colunas.</p>
+                                    <!-- Texto descritivo -->
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                    <!-- Botão de ação -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna do Card 3 -->
+                    </div>
+                    <!-- Fechamento da linha dos cards -->
+
+		<div class="container mt-4">
+                <!-- Container interno com margem superior para organizar o conteúdo -->
+                    <div class="row">
+                    <!-- Linha para organizar os cards em colunas -->
+                        <div class="col-md-4 mb-4">
+                        <!-- Coluna ocupando 4/12 da largura em telas médias, com margem inferior -->
+                            <div class="card h-100">
+                            <!-- Card do Bootstrap com altura 100% para uniformidade -->
+                                <img src="./Assets/honda_civic_type_r_2022_4k_8k_2-3840x2160.jpg" class="card-img-top" alt="...">
+                                <!-- Imagem de placeholder no topo do card -->
+                                <div class="card-body">
+                                <!-- Corpo do card com conteúdo -->
+                                    <h5 class="card-title">Honda Civic Type R 2024</h5>
+                                    <!-- Título do card -->
+                                    <p class="card-text">Este é o quarto card de exemplo com algum conteúdo de texto.</p>
+                                    <!-- Texto descritivo do card -->
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                    <!-- Botão azul primário com link -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna do Card 4 -->
+                        
+                        <div class="col-md-4 mb-4">
+                        <!-- Coluna para o quinto card -->
+                            <div class="card h-100">
+                            <!-- Card com altura uniforme -->
+                                <img src="./Assets/mugen_honda_civic_type_r_2024-HD.jpg" class="card-img-top" alt="...">
+                                <!-- Imagem de placeholder -->
+                                <div class="card-body">
+                                <!-- Corpo do card -->
+                                    <h5 class="card-title">Honda Civic Type R 2024</h5>
+                                    <!-- Título do card -->
+                                    <p class="card-text">O quinto card com conteúdo diferente para demonstrar o layout.</p>
+                                    <!-- Texto descritivo -->
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                    <!-- Botão de ação -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna do Card 5 -->
+                        
+                        <div class="col-md-4 mb-4">
+                        <!-- Coluna para o sexto card -->
+                            <div class="card h-100">
+                            <!-- Card com altura uniforme -->
+                                <img src="./Assets/mugen_honda_civic_type_r_2024_4k-3840x2160.jpg" class="card-img-top" alt="...">
+                                <!-- Imagem de placeholder -->
+                                <div class="card-body">
+                                <!-- Corpo do card -->
+                                    <h5 class="card-title">Honda Civic Type R 2024</h5>
+                                    <!-- Título do card -->
+                                    <p class="card-text">Esse é o sexto card completando a linha de três colunas.</p>
+                                    <!-- Texto descritivo -->
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                    <!-- Botão de ação -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna do Card 6 -->
+                    </div>
+                    <!-- Fechamento da linha dos cards -->
+
+                    
+                    <div class="row mt-4">
+                    <!-- Nova linha com margem superior para seção adicional -->
+                        <div class="col-12">
+                        <!-- Coluna ocupando toda a largura -->
+                            <div class="p-4 bg-light rounded">
+                            <!-- Div com padding, fundo claro e bordas arredondadas -->
+                                <h2>Sobre Nós</h2>
+                                <!-- Título da seção -->
+				<p>A história da Honda começou em 1948, no Japão, com a fundação da empresa por Soichiro Honda. A Honda começou como uma fabricante de motocicletas, mas entrou no setor automotivo nos anos 60.</p>
+                    		<p>A palavra “Honda” significa em japonês “aquele que provém da base dos campos”, uma referência às humildes origens de Soichiro Honda</p>
+                                <!-- Segundo parágrafo com mais texto de exemplo -->
+                            </div>
+                        </div>
+                        <!-- Fechamento da coluna da seção 'Sobre Nós' -->
+                    </div>
+                    <!-- Fechamento da linha da seção adicional -->
+                </div>
+                <!-- Fechamento do container interno da área de conteúdo -->
+            </div>
+            <!-- Fechamento da coluna principal de conteúdo -->
+        </div>
+        <!-- Fechamento da linha principal com sidebar e conteúdo -->
+        
+        <footer class="bg-dark text-white text-center p-4 mt-4">
+        <!-- Rodapé com fundo escuro, texto branco, centralizado, padding e margem superior -->
+            <div class="container">
+            <!-- Container interno para limitar a largura do conteúdo do rodapé -->
+                <div class="row">
+                <!-- Linha para organizar o conteúdo do rodapé em colunas -->
+                    <div class="col-md-4">
+                    <!-- Coluna ocupando 4/12 da largura em telas médias -->
+                        <h5>Links Rápidos</h5>
+                        <!-- Título da seção de links rápidos -->
+                        <ul class="list-unstyled">
+                        <!-- Lista sem marcadores para links -->
+                            <li><a href="#" class="text-white">Início</a></li>
+                            <!-- Link para 'Início' com texto branco -->
+                            <li><a href="#" class="text-white">Galeria</a></li>
+                            <!-- Link para 'Galeria' apontando para arquivo externo -->
+                            <li><a href="#" class="text-white">Sobre</a></li>
+                            <!-- Link para 'Sobre' -->
+                            <li><a href="#" class="text-white">Contato</a></li>
+                            <!-- Link para 'Contato' -->
+                        </ul>
+                    </div>
+                    <!-- Fechamento da coluna de links rápidos -->
+                    
+                    <div class="col-md-4">
+                    <!-- Segunda coluna do rodapé -->
+                        <h5>Contato</h5>
+                        <!-- Título da seção de contato -->
+                        <address>
+                        <!-- Tag semântica para informações de contato -->
+                            <p><i class="bi bi-geo-alt"></i> Rua 1008, Qd 21, Lote 02, S/N, Setor Pedro Ludovico - Goiânia-GO.</p>
+                            <!-- Endereço com ícone de localização -->
+                            <p><i class="bi bi-envelope"></i> dyego.hit@gmail.com</p>
+                            <!-- Email com ícone de envelope -->
+                            <p><i class="bi bi-phone"></i> (62) 98100-0000</p>
+                            <!-- Telefone com ícone de telefone -->
+                        </address>
+                    </div>
+                    <!-- Fechamento da coluna de contato -->
+                    
+                    <div class="col-md-4">
+                    <!-- Terceira coluna do rodapé -->
+                        <h5>Redes Sociais</h5>
+                        <!-- Título da seção de redes sociais -->
+                        <a href="https://www.instagram.com" target="_blank" class="text-white me-2"><i class="bi bi-instagram fs-4"></i></a>
+                        <!-- Link para Instagram com ícone grande e margem à direita -->
+                        <a href="https://facebook.com" target="_blank" class="text-white me-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <!-- Link para Facebook com ícone grande -->
+                        <a href="https://wa.me" target="_blank" class="text-white me-2"><i class="bi bi-whatsapp fs-4"></i></a>
+                        <!-- Link para WhatsApp com ícone grande -->
+                        <a href="https://x.com/" target="_blank" class="text-white me-2"><i class="bi bi-x fs-4"></i></a>
+                        <!-- Link para Twitter (X) com ícone grande -->
+                        <a href="https://www.linkedin.com/" target="_blank" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                        <!-- Link para LinkedIn com ícone grande -->
+                    </div>
+                    <!-- Fechamento da coluna de redes sociais -->
+                </div>
+                <!-- Fechamento da linha do rodapé -->
+                <hr>
+                <!-- Linha horizontal para separar seções -->
+                <div class="row">
+                <!-- Nova linha para direitos autorais -->
+                    <div class="col-12">
+                    <!-- Coluna ocupando toda a largura -->
+                        <p class="mb-0">© 2025 Meu Site. Todos os direitos reservados.</p>
+                        <!-- Texto de direitos autorais sem margem inferior -->
+                    </div>
+                </div>
+                <!-- Fechamento da linha de direitos autorais -->
+            </div>
+            <!-- Fechamento do container do rodapé -->
+        </footer>
+        <!-- Fechamento do rodapé -->
+    </div>
+    <!-- Fechamento do container-fluid principal -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Importa o JavaScript do Bootstrap 5.3.0-alpha1 via CDN, incluindo Popper.js, para funcionalidades interativas -->
+</body>
+<!-- Fechamento da seção 'body' -->
+</html>
+<!-- Fechamento do documento HTML -->
